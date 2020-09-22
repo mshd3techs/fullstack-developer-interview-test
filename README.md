@@ -26,8 +26,6 @@ A seguir seguem uma história do usuário e os seus cenários para o desenvolvim
 
 Ambos devem ter o seu proprio Dockerfile e um arquivo Docker-Compose para subir a stack do serviço e a sua interface. 
 
-**PRAZO**: 7 dias após o envio do teste.
-
 ```feature
 Funcionalidade: Gestão de reservas de quartos.
 
