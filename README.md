@@ -22,12 +22,48 @@ Ao revisar seu código vamos prestar atenção nos seguintes itens:
 Respeite o seu nível de conhecimento e experiência, o importante é você saber dizer o motivo das suas escolhas. Se você tiver qualquer dúvida, por favor, entre em contato com a gente. Se quiser uma revisão no seu código em um Pull Request no Github, pode nos chamar. Estamos disponíveis para te ajudar a finalizar esse processo. Ah, por último. Você acha que consegue nos responder em quanto tempo? Duas semanas é ok para você?
 
 ## IDEIAS DE PROJETOS
-A seguir seguem algumas ideias de projetos que você pode implementar:
+A seguir seguem uma história do usuário e os seus cenários para o desenvolvimento. Você terá que implementar um serviço REST com a funcionalidade solicitada e uma aplicação Angular 9 que consuma o mesmo serviço.
 
-- Cliente para o GitHub;
-- Cliente para o Twitter;
-- Cliente para o Meetup.
+Ambos devem ter o seu proprio Dockerfile e um arquivo Docker-Compose para subir a stack do serviço e a sua interface. 
 
+**PRAZO**: 7 dias após o envio do teste.
+
+```feature
+Funcionalidade: Gestão de reservas de quartos.
+
+  "Eu, como o um dos responsáveis pela gestão de reservas do hotel Férias & Co, 
+  quero registrar uma nova reserva de quartos,
+  para realizar um melhor controle sobre os quartos reservados"
+
+  Cenário: Reserva de quarto.
+    Dado uma nova reserva de quarto
+    E fornecido os nomes completos de cada hospede 
+    E as suas datas de nascimento
+    E os seus CPFs
+    E indicado qual deles é o pagante
+    E o ids dos quartos reservados
+    E indicado quais hospedes ficaram em cada quarto
+    E informado a data de entrada(Check-in)
+    E a data de saída(Check-out),
+    Quando solicitado a reserva
+    Então garanta que os dados sejam armazenados
+    E gere um indentificador único para essa transação.
+
+  Cenário: Quarto já reservado.
+    Dado uma nova reserva de quarto
+    E fornecido id de um quarto ja esteja reservado 
+    Quando solicitado a reserva
+    Então garanta que os dados não sejam armazenados
+    E informe que o quarto está reservado.
+
+  Cenário: Quarto inexistente.
+    Dado uma nova reserva de quarto
+    E fornecido id de um quarto que seja inexistente 
+    Quando solicitado a reserva
+    Então garanta que os dados não sejam armazenados.
+    E informe que o quarto não existe.
+    
+```
 Tem alguma outra ideia? Tem algum projeto que já está pronto e gostaria de apresentar? Fale com a gente :)
 
 ## COMO COMPARTILHAR O PROJETO CONOSCO
